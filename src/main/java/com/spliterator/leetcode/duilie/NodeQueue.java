@@ -1,22 +1,23 @@
 package com.spliterator.leetcode.duilie;
 
+
+
 /**
  * @author Chunlei.L
  * @date 2020/06/08
  */
-public class NodeQueue {
+public class  NodeQueue {
 
     private int capacity;
     private int size = 0;
     private Node head = null;
     private Node tail = null;
 
-
     public NodeQueue(int cap){
         this.capacity=cap;
     }
 
-    public boolean enQueue(String k,String v){
+    public synchronized boolean enQueue(String k,String v){
         if(capacity<=size){
             return false;
         }
